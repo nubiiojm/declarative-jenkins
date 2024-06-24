@@ -4,7 +4,7 @@ pipeline {
     stages {
        stage('Clone-Repo') {
 	  steps {
-	        	git url: 'https://github.com/nubiiojm/declarative-jenkins/new.git',
+	        	 git url: 'https://github.com/nubiiojm/declarative-jenkins.git,
 				branch: 'main'
 	    	}
         }
