@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+       stage('Clone-Repo') {
+	  steps {
+	        	git url: 'https://github.com/nubiiojm/declarative-jenkins/new.git',
+				branch: 'main'
+	    	}
+        }
+	stage('Build') {
+		steps {
+			echo 'mvn building'
+		}
+	}	
+       stage('test') {
+		steps {
+			echo 'mvn testing'
+		}
+	}	
+	stage('Deploy') {
+	   steps {
+	        echo 'echo deploying application '
+	    }
+	}
+}
+}
